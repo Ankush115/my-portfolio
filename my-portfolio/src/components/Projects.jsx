@@ -1,25 +1,59 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 const sample = [
   {
-    title: 'Micro Insurance Management System',
-    desc: "A comprehensive web platform for managing micro-insurance policies, user records, and articles with intuitive dashboards.",
+    title: 'HealthCare Insurance Management System',
+    desc: "A comprehensive web platform for managing healthcare-insurance policies, user records, and articles with intuitive dashboards.",
+    role: 'Frontend Developer',
+    status: 'Live',
     url: '#',
     repo: '#',
     image: '/images/micro-insurance.svg',
-    tags: ['React', 'Node.js', 'MongoDB', 'UI Design'],
+    tags: ['React', 'Node.js', 'MongoDB', 'UI Design','TypeScript','React-Query'],
+    stats: [
+      { label: 'Users', value: '1.2K+' },
+      { label: 'Uptime', value: '99.9%' },
+      { label: 'Pages', value: '18+' }
+    ],
+    highlights: [
+      'Responsive analytics dashboard',
+      'Secure user and policy flows',
+      'Realtime coverage insights'
+    ],
     featured: true
   },
 ]
 
 export default function Projects() {
   const [filter, setFilter] = useState('all')
+  const [revealed, setRevealed] = useState(false)
+  const projectsRef = useRef(null)
+
+  useEffect(() => {
+    const section = projectsRef.current
+    if (!section) return
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setRevealed(true)
+            observer.disconnect()
+          }
+        })
+      },
+      { threshold: 0.18 }
+    )
+
+    observer.observe(section)
+    return () => observer.disconnect()
+  }, [])
   
   const allTags = [...new Set(sample.flatMap(p => p.tags))]
   const filtered = filter === 'all' ? sample : sample.filter(p => p.tags.includes(filter))
 
   return (
-    <section id="projects" className="section projects">
+    <section id="projects" ref={projectsRef} className={`section projects ${revealed ? 'reveal' : 'hidden'}`}>
       <div className="container">
         <div className="projects-header">
           <div>
@@ -64,13 +98,33 @@ export default function Projects() {
               <div className="project-body">
                 <h3>{p.title}</h3>
                 <p>{p.desc}</p>
-                
+
+                <div className="project-meta">
+                  {p.role && <span className="project-pill">{p.role}</span>}
+                  {p.status && <span className="project-pill project-pill-alt">{p.status}</span>}
+                </div>
+
                 <div className="project-tags">
                   {p.tags.map(tag => (
                     <span key={tag} className="project-tag">{tag}</span>
                   ))}
                 </div>
-                
+
+                <div className="project-stats">
+                  {p.stats?.map(stat => (
+                    <div key={stat.label} className="project-stat">
+                      <span>{stat.value}</span>
+                      <small>{stat.label}</small>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="project-highlights">
+                  {p.highlights?.map(item => (
+                    <span key={item} className="project-highlight">{item}</span>
+                  ))}
+                </div>
+
                 <div className="project-links">
                   <a className="btn btn-primary-small" href={p.url} target="_blank" rel="noreferrer">Live Demo</a>
                   <a className="btn btn-secondary-small" href={p.repo} target="_blank" rel="noreferrer">GitHub</a>

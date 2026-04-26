@@ -5,29 +5,64 @@ export default function About() {
     <section id="about" className="section about">
       <div className="container">
         <h2>About Me</h2>
-        <p className="about-text">
-          I’m a Frontend Developer with 3.5+ years of experience in creating
-          websites and web apps using React.js, JavaScript, and Redux. I enjoy
-          building fast, clean, and easy-to-use interfaces that work well on all
-          devices. I’m good at working with components, using APIs, and
-          improving website performance. I follow clean coding practices and
-          always try to write code that’s easy to understand and maintain. I
-          work well in teams and have experience in Agile environments. I’m
-          always looking to learn new things and improve my skills in frontend
-          development.
-        </p>
+        <div className="about-grid">
+          <div className="about-card">
+            <div className="about-card-inner">
+              <div className="about-avatar"></div>
+              <h3>Frontend Developer</h3>
+              <p className="about-tagline">
+                I design thoughtful interfaces with clear motion, strong accessibility, and fast performance.
+              </p>
+              <div className="about-stats">
+                <div className="about-stat">
+                  <span>3.5+</span>
+                  <small>Years experience</small>
+                </div>
+                <div className="about-stat">
+                  <span>25+</span>
+                  <small>Projects shipped</small>
+                </div>
+                <div className="about-stat">
+                  <span>100%</span>
+                  <small>Responsive builds</small>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <h3>Skills</h3>
-        <ul className="skills">
-          <li>React.JS</li>
-          <li>HTML & CSS </li>
-           <li>Tailwind CSS</li>
-          <li>JavaScript</li>
-          <li>UI design &amp; accessibility</li>
-          <li>Redux/Redux Toolkit</li>
-          <li>MongoDB</li>
-         
-        </ul>
+          <div>
+            <p className="about-text">
+              I’m a Frontend Developer with 3.5+ years of experience in creating
+              websites and web apps using React.js, JavaScript, and Redux. I enjoy
+              building fast, clean, and easy-to-use interfaces that work well on all
+              devices. I’m good at working with components, using APIs, and
+              improving website performance. I follow clean coding practices and
+              always try to write code that’s easy to understand and maintain. I
+              work well in teams and have experience in Agile environments. I’m
+              always looking to learn new things and improve my skills in frontend
+              development.
+            </p>
+
+            <div className="about-highlight">
+              <p>
+                I love turning complex ideas into polished digital experiences, with a strong focus on clarity, speed, and delightful interaction.
+              </p>
+            </div>
+
+            <h3>Skills</h3>
+            <ul className="skills">
+              <li>React.JS</li>
+              <li>HTML &amp; CSS</li>
+              <li>Tailwind CSS</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React-Query/Tanstack-Query</li>
+              <li>UI design &amp; accessibility</li>
+              <li>Redux/Redux Toolkit</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   );
