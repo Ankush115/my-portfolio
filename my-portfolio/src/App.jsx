@@ -1,25 +1,23 @@
-
 import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
-import Hero from './components/Hero'
-import About from './components/About'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
+import Home from './pages/Home'
+import ProjectsPage from './pages/ProjectsPage'
+import ProjectDetail from './pages/ProjectDetail'
 
 function App() {
   return (
-    <div className="app">
-      <Header />
-      <main>
-        <Hero />
-
-        <About />
-        <Projects />
-        <Contact />
-      </main>
-
-      <footer className="site-footer">© {new Date().getFullYear()} Ankush Wagh — Built with React</footer>
-    </div>
+    <Router>
+      <div className="app">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/projects/:id" element={<ProjectDetail />} />
+        </Routes>
+        <footer className="site-footer">© {new Date().getFullYear()} Ankush Wagh — Built with React</footer>
+      </div>
+    </Router>
   )
 }
 

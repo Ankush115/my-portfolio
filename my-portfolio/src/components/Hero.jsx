@@ -10,7 +10,7 @@ export default function Hero() {
           </div>
           <div className="hero-text">
             <h1>Ankush Wagh</h1>
-            <p className="title">Frontend Developer</p>
+            <p className="title">Frontend Developer (3.5+ years of experience)</p>
             <p className="subtitle">Building beautiful, responsive web experiences with React, Vite & modern CSS</p>
             <div className="hero-buttons">
               <a href="#projects" className="btn btn-primary">View Projects</a>

@@ -5,8 +5,8 @@ export default function About() {
     <section id="about" className="section about">
       <div className="container">
         <h2>About Me</h2>
-        <p>
-          I’m a Frontend Developer with 3+ years of experience in creating
+        <p className="about-text">
+          I’m a Frontend Developer with 3.5+ years of experience in creating
           websites and web apps using React.js, JavaScript, and Redux. I enjoy
           building fast, clean, and easy-to-use interfaces that work well on all
           devices. I’m good at working with components, using APIs, and
@@ -19,11 +19,14 @@ export default function About() {
 
         <h3>Skills</h3>
         <ul className="skills">
-          <li>React / Vite</li>
-          <li>HTML &amp; CSS (Flexbox, Grid)</li>
+          <li>React.JS</li>
+          <li>HTML & CSS </li>
+           <li>Tailwind CSS</li>
           <li>JavaScript</li>
           <li>UI design &amp; accessibility</li>
           <li>Redux/Redux Toolkit</li>
+          <li>MongoDB</li>
+         
         </ul>
       </div>
     </section>
