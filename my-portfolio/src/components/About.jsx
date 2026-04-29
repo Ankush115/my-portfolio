@@ -11,7 +11,8 @@ export default function About() {
               <div className="about-avatar"></div>
               <h3>Frontend Developer</h3>
               <p className="about-tagline">
-                I design thoughtful interfaces with clear motion, strong accessibility, and fast performance.
+                I design thoughtful interfaces with clear motion, strong
+                accessibility, and fast performance.
               </p>
               <div className="about-stats">
                 <div className="about-stat">
@@ -19,12 +20,12 @@ export default function About() {
                   <small>Years experience</small>
                 </div>
                 <div className="about-stat">
-                  <span>25+</span>
+                  <span>5+</span>
                   <small>Projects shipped</small>
                 </div>
                 <div className="about-stat">
                   <span>100%</span>
-                  <small>Responsive builds</small>
+                  <small>Responsive design</small>
                 </div>
               </div>
             </div>
@@ -33,19 +34,21 @@ export default function About() {
           <div>
             <p className="about-text">
               I’m a Frontend Developer with 3.5+ years of experience in creating
-              websites and web apps using React.js, JavaScript, and Redux. I enjoy
-              building fast, clean, and easy-to-use interfaces that work well on all
-              devices. I’m good at working with components, using APIs, and
-              improving website performance. I follow clean coding practices and
-              always try to write code that’s easy to understand and maintain. I
-              work well in teams and have experience in Agile environments. I’m
-              always looking to learn new things and improve my skills in frontend
-              development.
+              websites and web apps using React.js, JavaScript, and Redux. I
+              enjoy building fast, clean, and easy-to-use interfaces that work
+              well on all devices. I’m good at working with components, using
+              APIs, and improving website performance. I follow clean coding
+              practices and always try to write code that’s easy to understand
+              and maintain. I work well in teams and have experience in Agile
+              environments. I’m always looking to learn new things and improve
+              my skills in frontend development.
             </p>
 
             <div className="about-highlight">
               <p>
-                I love turning complex ideas into polished digital experiences, with a strong focus on clarity, speed, and delightful interaction.
+                I love turning complex ideas into polished digital experiences,
+                with a strong focus on clarity, speed, and delightful
+                interaction.
               </p>
             </div>
 

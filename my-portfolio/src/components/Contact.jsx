@@ -1,16 +1,53 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [position, setPosition] = useState("");
+  const [reason, setReason] = useState("Project inquiry");
+  const [message, setMessage] = useState("");
+  const [statusMessage, setStatusMessage] = useState("");
 
   function handleSubmit(e) {
-    e.preventDefault()
-    const subject = encodeURIComponent(`Contact from ${name || 'Website'}`)
-    const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`)
-    window.location.href = `mailto:alwagh.45@gmail.com?subject=${subject}&body=${body}`
+    e.preventDefault();
+    if (!name || !email) {
+      alert("Please fill in your name and email before sending.");
+      return;
+    }
+
+    const templateParams = {
+      from_name: name,
+      position: position,
+      from_email: email,
+      reason: reason,
+      message: message,
+    };
+
+    emailjs
+      .send(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        templateParams,
+        "YOUR_PUBLIC_KEY",
+      )
+      .then(() => {
+        alert("Message sent successfully!");
+        setStatusMessage("Your message has been sent.");
+        setName("");
+        setEmail("");
+        setPosition("");
+        setMessage("");
+      })
+      .catch(() => {
+        setStatusMessage("Failed to send message. Please try again.");
+        alert("Oops! Something went wrong. Please try again later.");
+        // console.log("Something went wrong with emailjs:");
+        
+      });
+      console.log("Your message sent Successfully:", templateParams);
   }
+ 
 
   return (
     <section id="contact" className="section contact">
@@ -18,7 +55,8 @@ export default function Contact() {
         <div className="contact-top">
           <h2>Contact</h2>
           <p className="contact-description">
-            Ready to collaborate on a polished web experience? Share your idea and I’ll get back to you quickly.
+            Ready to collaborate on a polished web experience? Share your idea
+            and I’ll get back to you quickly.
           </p>
         </div>
 
@@ -27,12 +65,19 @@ export default function Contact() {
             <div className="contact-card-inner">
               <h3>Let’s connect</h3>
               <p className="contact-subtitle">
-                Fast replies, friendly guidance, and clean execution for your next project.
+                Fast replies, friendly guidance, and clean execution for your
+                next project.
               </p>
               <div className="contact-info">
                 <div>
-                  <p><strong>Phone:</strong> <a href="tel:+919130387384">+91 9130387384</a></p>
-                  <p><strong>Email:</strong> <a href="mailto:alwagh.45@gmail.com">alwagh.45@gmail.com</a></p>
+                  <p>
+                    <strong>Phone:</strong>{" "}
+                    <a href="tel:+91-9130387384">+91 9130387384</a>
+                  </p>
+                  <p>
+                    <strong>Email:</strong>{" "}
+                    <a href="mailto:alwagh.45@gmail.com">alwagh.45@gmail.com</a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -41,28 +86,80 @@ export default function Contact() {
           <div className="contact-card contact-card-form-wrap">
             <form className="contact-form" onSubmit={handleSubmit}>
               <label>
-                Name
-                <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" />
+                Name <span className="required">*</span>
+                <input
+                  required
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Your name"
+                />
               </label>
 
               <label>
-                Email
-                <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" />
+                Position <span className="required">*</span>
+                <input
+                  value={position}
+                  onChange={(e) => setPosition(e.target.value)}
+                  placeholder="Your role or position"
+                />
+              </label>
+
+              <label>
+                Email <span className="required">*</span>
+                <input
+                  required
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="you@example.com"
+                />
+              </label>
+
+              <label>
+                Reason for contact <span className="required">*</span>
+                <select
+                  required
+                  className="dropdown"
+                  value={reason}
+                  placeholder="Select a reason"
+                  onChange={(e) => setReason(e.target.value)}
+                >
+                  <option>Project inquiry</option>
+                  <option>Design review</option>
+                  <option>Collaboration</option>
+                  <option>Website support</option>
+                  <option>Job Application</option>
+                  <option>Other</option>
+                </select>
               </label>
 
               <label>
                 Message
-                <textarea value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Say hello..." />
+                <textarea
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Say hello..."
+                />
               </label>
 
               <div className="contact-form-footer">
-                <button className="btn btn-primary-small contact-submit" type="submit">Send Message</button>
-                <span className="contact-note">I typically respond within 24 hours.</span>
+                <button
+                  className="btn btn-primary-small contact-submit"
+                  type="submit"
+                >
+                  Send Message
+                </button>
+                <span className="contact-note">
+                  I typically respond within 24 hours.
+                </span>
               </div>
+              {statusMessage && (
+                <p className="contact-status">{statusMessage}</p>
+              )}
             </form>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,10 +1,14 @@
 :root {
-  --bg: #0f1724;
-  --card: #0b1220;
-  --muted: #9aa4b2;
-  --accent: #4f46e5;
-  --accent-2: #06b6d4;
-  --text: #e6eef8;
+  --bg: #07101f;
+  --surface: rgba(10, 16, 31, 0.92);
+  --surface-strong: rgba(12, 18, 30, 0.98);
+  --muted: #a9b2c9;
+  --accent: #7c3aed;
+  --accent-2: #0ea5e9;
+  --accent-3: #ec4899;
+  --text: #f8fbff;
+  --border: rgba(255, 255, 255, 0.08);
+  --shadow: 0 30px 80px rgba(7, 10, 19, 0.5);
 }
 
 * {
@@ -12,13 +16,13 @@
 }
 
 html, body, #root {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  background: linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 50%, #0f1724 100%);
+  background: linear-gradient(135deg, #05080f 0%, #081026 45%, #07101f 100%);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -152,12 +156,12 @@ body {
   );
   border-radius: 50%;
   z-index: -1;
-  animation: rotate 12s linear infinite;
+  animation: rotate 25s linear infinite;
   filter: blur(40px);
 }
 
 @keyframes rotate {
-  0% { transform: rotate(0deg); }
+  50% { transform: rotate(360deg); }
   100% { transform: rotate(360deg); }
 }
 
@@ -299,22 +303,22 @@ body {
 .btn-primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   color: white;
-  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.3);
+  box-shadow: 0 18px 45px rgba(124, 58, 237, 0.25);
 }
 
 .btn-primary:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 50px rgba(79, 70, 229, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 24px 70px rgba(14, 165, 233, 0.3);
 }
 
 .btn-primary:active {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .btn-secondary {
-  background: transparent;
-  color: var(--accent);
-  border: 2px solid var(--accent);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  border: 2px solid rgba(14, 165, 233, 0.35);
   position: relative;
 }
 
@@ -322,7 +326,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(79, 70, 229, 0.1);
+  background: rgba(14, 165, 233, 0.12);
   border-radius: 10px;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -330,10 +334,10 @@ body {
 }
 
 .btn-secondary:hover {
-  background: rgba(79, 70, 229, 0.15);
-  border-color: var(--accent-2);
+  background: rgba(14, 165, 233, 0.16);
+  border-color: var(--accent);
   color: var(--accent-2);
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 
 .hero-social {
@@ -377,9 +381,24 @@ body {
   padding: 2rem;
 }
 
+.app {
+  min-height: 100vh;
+  background: transparent;
+}
+
+.site-footer {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem 2rem 3rem;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
 /* Sections */
 .section {
-  padding: 4rem 0;
+  padding: 4.5rem 0;
 }
 
 .section h2 {
@@ -452,11 +471,12 @@ body {
 .about-card {
   position: relative;
   overflow: hidden;
-  border-radius: 24px;
+  border-radius: 26px;
   padding: 2rem;
-  background: linear-gradient(180deg, rgba(18, 25, 47, 0.92), rgba(11, 18, 32, 0.95));
-  border: 1px solid rgba(79, 70, 229, 0.25);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+  background: rgba(10, 16, 31, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
   animation: fadeInUp 0.8s ease both;
 }
 
@@ -464,7 +484,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.12), transparent 34%);
+  background: radial-gradient(circle at top left, rgba(124, 58, 237, 0.14), transparent 34%);
   pointer-events: none;
 }
 
@@ -549,15 +569,15 @@ body {
 }
 
 .skills li {
-  background: linear-gradient(135deg, rgba(79, 70, 229, 0.2), rgba(6, 182, 212, 0.12));
-  padding: 0.7rem 1.2rem;
-  border-radius: 25px;
-  color: var(--accent);
-  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.75rem 1.25rem;
+  border-radius: 24px;
+  color: var(--text);
+  font-size: 0.93rem;
   font-weight: 600;
-  border: 1px solid rgba(79, 70, 229, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   cursor: default;
   animation: slideInUp 0.5s ease-out both;
 }
@@ -1420,6 +1440,17 @@ body {
   font-size: 0.95rem;
 }
 
+.contact-status {
+  margin-top: 1rem;
+  color: var(--accent-2);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.contact-status.error {
+  color: #f87171;
+}
+
 .contact-form input,
 .contact-form textarea {
   background: rgba(255, 255, 255, 0.04);
@@ -1490,17 +1521,50 @@ body {
   font-size: 0.95rem;
 }
 
+.contact-form .required {
+  color: var(--accent-3);
+  margin-left: 0.2rem;
+  font-size: 1rem;
+}
+
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select {
   margin-top: 0.5rem;
+  width: 100%;
+  min-height: 3rem;
   padding: 0.85rem 1rem;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--text);
   font-family: inherit;
   font-size: 0.95rem;
   transition: all 0.3s ease;
+}
+
+.contact-form select {
+  appearance: none;
+  cursor: pointer;
+  background: rgba(32, 23, 23, 0.007);
+  background-image: linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.75) 50%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.75) 50%, transparent 50%);
+  background-position: calc(100% - 1rem) center, calc(100% - 0.65rem) center;
+  background-size: 8px 8px, 8px 8px;
+  background-repeat: no-repeat;
+  padding-right: 2.5rem;
+}
+
+.contact-form select:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(79, 70, 229, 0.08);
+  box-shadow:
+    0 0 0 3px rgba(79, 70, 229, 0.2),
+    0 0 20px rgba(79, 70, 229, 0.15);
+  transform: scale(1.01);
+    color:black;
+
 }
 
 .contact-form input:focus,
