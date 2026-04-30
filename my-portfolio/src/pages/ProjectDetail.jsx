@@ -17,8 +17,8 @@ export default function ProjectDetail() {
           <div className="detail-content">
             <div className="detail-image">
               <img
-                src="/images/micro-insurance.svg"
-                alt="Micro Insurance Management System"
+                src="./images/healthcarelogo.jpg"
+                alt="Healthcare Insurance Management System"
               />
             </div>
 

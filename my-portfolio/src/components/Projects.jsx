@@ -8,7 +8,7 @@ const sample = [
     status: "Open Source",
     url: "https://github.com/Ankush115/react-ecommerce-ui",
     repo: "https://github.com/Ankush115/react-ecommerce-ui",
-    image: "",
+    image: "./images/shopingcartlogo.png",
     tags: ["React", "JavaScript", "UI Design", "CSS", "Vite"],
     stats: [
      {label:"Pages",value:"5+"}, 
@@ -31,7 +31,7 @@ const sample = [
     status: "Open Source",
     url: "https://github.com/Ankush115/todo",
     repo: "https://github.com/Ankush115/todo",
-    image: "",
+    image: "./images/todopagelogo.png",
     tags: ["React", "JavaScript", "Productivity", "LocalStorage"],
     stats: [
       { label: "Tasks", value: "Flexible" },
@@ -53,7 +53,7 @@ const sample = [
     status: "Live",
     url: "https://codenza-ui.vercel.app",
     repo: "https://github.com/Ankush115/user-interface",
-    image: "",
+    image: "./images/registrationpagelogo.png",
     tags: ["JavaScript", "CSS", "Responsive Design", "Vite","React","Express","MongoDB"],
     stats: [
       { label: "Pages", value: "2" },
@@ -68,29 +68,7 @@ const sample = [
       "stored data in local storage and mongoDB database",
     ],
   },
-  {
-    title: "Express.js API Server",
-    desc: "A backend server deployed on Vercel, built to support API routing, data handling, and server-side workflows.",
-    role: "Backend Developer",
-    status: "Live",
-    url: "https://codenza-server.vercel.app",
-    repo: "https://github.com/Ankush115/server",
-    image: "",
-    tags: ["Node.js", "API", "Express", "JavaScript","MongoDB","Vercel"],
-    stats: [
-      { label: "Endpoints", value: "10+" },
-      { label: "Deployments", value: "Live" },
-      { label: "Stability", value: "99.9%" },
-      { label: "Stars", value: "4.6" },
-    ],
-    highlights: [
-      "API route implementation",
-      "Backend deployment on Vercel",
-      "Server-side data handling",
-      "Express.js routing",
-      "Connect wit mongoDB database",
-    ],
-  },
+
   {
     title: "HealthCare Insurance Management System",
     desc: "A comprehensive web platform for managing healthcare-insurance policies, user records, and articles with intuitive dashboards.",
@@ -98,7 +76,7 @@ const sample = [
     status: "Live",
     url: "https://www.apollopharmacy.in/?srsltid=AfmBOoog48WqpIcK1JS3aQ-aBdLybhl5GU5C9rm_aTdcnjptewClHPIC",
     repo: "#",
-    image: "/images/micro-insurance.svg",
+    image: "./images/healthcarelogo.jpg",
     tags: [
       "React",
       "Node.js",
