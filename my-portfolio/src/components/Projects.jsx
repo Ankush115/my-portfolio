@@ -26,14 +26,14 @@ const sample = [
     ],
   },
   {
-    title: "To-Do App",
+    title: "Simple To-Do App",
     desc: "A lightweight task manager built with React to create, update, and organize daily to-dos with a clean, responsive interface.",
     role: "Frontend Developer",
     status: "Open Source",
     url: "https://github.com/Ankush115/todo",
     repo: "https://github.com/Ankush115/todo",
     image: "./images/todopagelogo.png",
-    tags: ["React", "JavaScript", "Productivity", "LocalStorage"],
+    tags: ["React", "JavaScript", "Productivity", "CSS", "Vite"],
     stats: [
       { label: "Tasks", value: "Flexible" },
       { label: "Users", value: "Growing" },
@@ -48,7 +48,7 @@ const sample = [
   },
   
   {
-    title: "Registration Form",
+    title: "Simple Registration Form",
     desc: "A modern landing page with reusable interface components, polished visuals, and responsive design patterns.",
     role: "Frontend Developer",
     status: "Live",
