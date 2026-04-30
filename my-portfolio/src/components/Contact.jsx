@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
@@ -8,6 +8,7 @@ export default function Contact() {
   const [reason, setReason] = useState("Project inquiry");
   const [message, setMessage] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
+  const formRef=useRef();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -43,6 +44,7 @@ export default function Contact() {
         setStatusMessage("Failed to send message. Please try again.");
         alert("Oops! Something went wrong. Please try again later.");
       });
+      console.log("Message sent with params:", templateParams);
   }
 
   return (
@@ -80,7 +82,7 @@ export default function Contact() {
           </div>
 
           <div className="contact-card contact-card-form-wrap">
-            <form className="contact-form" onSubmit={handleSubmit}>
+            <form className="contact-form" onSubmit={handleSubmit} ref={formRef}>
               <label>
                 Name <span className="required">*</span>
                 <input
