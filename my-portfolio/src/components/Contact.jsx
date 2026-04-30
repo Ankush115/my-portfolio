@@ -42,10 +42,8 @@ export default function Contact() {
       .catch(() => {
         setStatusMessage("Failed to send message. Please try again.");
         alert("Oops! Something went wrong. Please try again later.");
-        // console.log("Something went wrong with emailjs:");
         
       });
-      // console.log("Your message sent Successfully:", templateParams);
   }
  
 

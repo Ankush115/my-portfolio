@@ -17,7 +17,7 @@ export default function Hero() {
               <a href="#contact" className="btn btn-secondary">Get in Touch</a>
             </div>
             <div className="hero-social">
-              <a href="https://github.com" aria-label="GitHub">GitHub</a>
+              <a href="https://github.com/Ankush115" aria-label="GitHub">GitHub</a>
               <a href="https://www.linkedin.com/in/ankush-wagh-bb244b1b2/" aria-label="LinkedIn">LinkedIn</a>
               <a href="mailto:alwagh.45@gmail.com" aria-label="Email">Email</a>
             </div>
