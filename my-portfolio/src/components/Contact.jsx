@@ -45,7 +45,7 @@ export default function Contact() {
         // console.log("Something went wrong with emailjs:");
         
       });
-      console.log("Your message sent Successfully:", templateParams);
+      // console.log("Your message sent Successfully:", templateParams);
   }
  
 
