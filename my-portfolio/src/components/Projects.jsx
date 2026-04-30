@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 
 const sample = [
   {
-    title: "E-commerce UI(React)",
+    title: "Shop Online",
     desc: "An interactive storefront UI built with React featuring product browsing, cart interactions, and responsive shopping layouts.",
     role: "Frontend Developer",
-    status: "Open Source",
+    status: "live ",
     url: "https://shoponline-vert.vercel.app/",
     repo: "https://github.com/Ankush115/react-ecommerce-ui",
     image: "./images/shopingcartlogo.png",
@@ -16,6 +16,7 @@ const sample = [
       {label:"Users", value:"Growing"},
       { label: "Interactions", value: "100+" },
       { label: "Stars", value: "4.5" },
+      { label: "Deployments", value: "Live" },
     ],
     highlights: [
       "Simple Ecommerce UI for practice",
