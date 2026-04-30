@@ -26,10 +26,10 @@ export default function Contact() {
 
     emailjs
       .send(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_kxiv1lr",
+        "template_i5bbdh7",
         templateParams,
-        "YOUR_PUBLIC_KEY",
+        "EAwLzVONDowFV7ej2",
       )
       .then(() => {
         alert("Message sent successfully!");
