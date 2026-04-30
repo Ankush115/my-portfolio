@@ -14,8 +14,8 @@ const sample = [
      {label:"Pages",value:"5+"}, 
       { label: "Products", value: "30+" },
       {label:"Users", value:"Growing"},
-      { label: "Interactions", value: "100+" },
-      { label: "Stars", value: "4.5" },
+      { label: "Interactions", value: "1000+" },
+      { label: "Stars", value: "4.8" },
       { label: "Deployments", value: "Live" },
     ],
     highlights: [
@@ -90,6 +90,7 @@ const sample = [
     stats: [
       { label: "Users", value: "10K+" },
       { label: "Deployments", value: "Live" },
+      {label:"interactions",value:"20K+"},
       { label: "Pages", value: "18+" },
       { label: "Stars", value: "4.9" },
     ],
