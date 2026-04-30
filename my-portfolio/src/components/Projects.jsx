@@ -6,7 +6,7 @@ const sample = [
     desc: "An interactive storefront UI built with React featuring product browsing, cart interactions, and responsive shopping layouts.",
     role: "Frontend Developer",
     status: "Open Source",
-    url: "https://github.com/Ankush115/react-ecommerce-ui",
+    url: "https://shoponline-vert.vercel.app/",
     repo: "https://github.com/Ankush115/react-ecommerce-ui",
     image: "./images/shopingcartlogo.png",
     tags: ["React", "JavaScript", "UI Design", "CSS", "Vite"],
