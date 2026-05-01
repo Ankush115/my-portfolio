@@ -25,13 +25,21 @@ export default function Contact() {
       message: message,
     };
 
-    emailjs
+    Promise.all([
+      emailjs
       .send(
         "service_kxiv1lr",
         "template_g4zai9h",
         templateParams,
         "EAwLzVONDowFV7ej2",
+      ),
+      emailjs.send(
+        "service_kxiv1lr",
+        "template_i5bbdh7",
+        templateParams,
+        "EAwLzVONDowFV7ej2"
       )
+    ])
       .then(() => {
         alert("Message sent successfully!");
         setStatusMessage("Your message has been sent.");
