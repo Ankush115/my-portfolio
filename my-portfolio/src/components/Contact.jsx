@@ -18,7 +18,7 @@ export default function Contact() {
     }
 
     const templateParams = {
-      from_name: name,
+      from_name:name,
       position: position,
       from_email: email,
       reason: reason,
@@ -44,6 +44,7 @@ export default function Contact() {
         setStatusMessage("Failed to send message. Please try again.");
         alert("Oops! Something went wrong. Please try again later.");
       });
+      console.log("Email Message:", templateParams);
   }
 
   return (
