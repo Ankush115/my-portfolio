@@ -28,7 +28,7 @@ export default function Contact() {
     emailjs
       .send(
         "service_kxiv1lr",
-        "template_i5bbdh7",
+        "template_g4zai9h",
         templateParams,
         "EAwLzVONDowFV7ej2",
       )
