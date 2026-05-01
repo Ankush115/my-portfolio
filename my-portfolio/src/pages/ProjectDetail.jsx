@@ -1,14 +1,33 @@
 import React from "react";
+import { Link, useParams } from "react-router-dom";
+import { projects } from "../data/projects";
 
 export default function ProjectDetail() {
+  const { id } = useParams();
+  const project = projects.find((item) => item.id === id);
+
+  if (!project) {
+    return (
+      <main>
+        <section className="page-hero">
+          <div className="container">
+            <h1>Project Not Found</h1>
+            <p>The project you requested could not be found.</p>
+            <Link to="/projects" className="btn btn-primary">
+              Back to Projects
+            </Link>
+          </div>
+        </section>
+      </main>
+    );
+  }
+
   return (
     <main>
       <section className="page-hero">
         <div className="container">
-          <h1>Micro Insurance Management System</h1>
-          <p>
-            A comprehensive web platform for managing micro-insurance policies
-          </p>
+          <h1>{project.title}</h1>
+          <p>{project.desc}</p>
         </div>
       </section>
 
@@ -16,77 +35,54 @@ export default function ProjectDetail() {
         <div className="container">
           <div className="detail-content">
             <div className="detail-image">
-              <img
-                src="./images/healthcarelogo.jpg"
-                alt="Healthcare Insurance Management System"
-              />
+              <img src={project.image} alt={project.title} />
             </div>
 
             <div className="detail-body">
               <h2>Project Overview</h2>
-              <p>
-                The Micro Insurance Management System is a comprehensive
-                web-based platform designed to simplify and automate the
-                management of micro-insurance policies, user records, and
-                articles. It provides an intuitive interface for managing
-                complex insurance operations with ease.
-              </p>
+              <p>{project.desc}</p>
 
               <h3>Key Features</h3>
               <ul className="features-list">
-                <li>
-                  Policy Management - Create, update, and manage insurance
-                  policies efficiently
-                </li>
-                <li>
-                  User Profiles - Comprehensive customer profile management
-                  system
-                </li>
-                <li>
-                  Document Management - Upload and organize insurance documents
-                </li>
-                <li>
-                  Real-time Analytics - Interactive dashboards with key metrics
-                </li>
-                <li>Secure Authentication - Enterprise-grade security</li>
-                <li>Responsive Design - Works seamlessly on all devices</li>
+                {project.highlights?.map((highlight) => (
+                  <li key={highlight}>{highlight}</li>
+                ))}
               </ul>
 
               <h3>Technologies Used</h3>
               <div className="tech-stack">
-                <span>React</span>
-                <span>Node.js</span>
-                <span>MongoDB</span>
-                <span>Express.js</span>
-                <span>JWT Authentication</span>
-                <span>Vite</span>
+                {project.tags.map((tag) => (
+                  <span key={tag}>{tag}</span>
+                ))}
               </div>
 
               <h3>My Role</h3>
-              <p>
-                Designed and developed the complete frontend interface with
-                React, implemented responsive UI components, and collaborated
-                with backend developers to integrate APIs. Focused on user
-                experience and accessibility throughout the development process.
-              </p>
+              <p>{project.role}</p>
 
               <div className="project-cta">
-                <a
-                  href="#"
-                  className="btn btn-primary"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  View Live Project
-                </a>
-                <a
-                  href="#"
-                  className="btn btn-secondary"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  View on GitHub
-                </a>
+                {project.url && (
+                  <a
+                    href={project.url}
+                    className="btn btn-primary"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    View Live Project
+                  </a>
+                )}
+                {project.repo && project.repo !== "#" && (
+                  <a
+                    href={project.repo}
+                    className="btn btn-secondary"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    View on GitHub
+                  </a>
+                )}
+                <Link to="/projects" className="btn btn-outline">
+                  Back to Projects
+                </Link>
               </div>
             </div>
           </div>
