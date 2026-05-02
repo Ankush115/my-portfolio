@@ -181,7 +181,7 @@ export default function Projects() {
       <div className="container">
         <div className="projects-header">
           <div>
-            <h2>Featured Projects</h2>
+            <h2>My Projects</h2>
             <p className="projects-subtitle">
               Showcasing my best work across different technologies and domains
             </p>
