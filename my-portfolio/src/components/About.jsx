@@ -8,7 +8,9 @@ export default function About() {
         <div className="about-grid">
           <div className="about-card">
             <div className="about-card-inner">
-              <div className="about-avatar"></div>
+              <div className="about-avatar">
+                  <img src="./images/profile.jpg" alt="Avatar" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "50%"  }} />
+              </div>
               <h3>Frontend Developer</h3>
               <p className="about-tagline">
                 I design thoughtful interfaces with clear motion, strong

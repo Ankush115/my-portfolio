@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 const sample = [
   {
     title: "Shop Online",
-    desc: "An interactive storefront UI built with React featuring product browsing, cart interactions, and responsive shopping layouts.",
+    desc: "An interactive store UI built with React featuring product browsing, cart interactions, and responsive shopping layouts.",
     role: "Frontend Developer",
     status: "live ",
     url: "https://shoponline-vert.vercel.app/",
@@ -11,12 +11,12 @@ const sample = [
     image: "./images/shopingcartlogo.png",
     tags: ["React", "JavaScript", "UI Design", "CSS", "Vite"],
     stats: [
-     {label:"Pages",value:"5+"}, 
+      { label: "Pages", value: "5+" },
+      { label: "Deployments", value: "Live" },
       { label: "Products", value: "30+" },
-      {label:"Users", value:"Growing"},
+      { label: "Users", value: "Growing" },
       { label: "Interactions", value: "1000+" },
       { label: "Stars", value: "4.8" },
-      { label: "Deployments", value: "Live" },
     ],
     highlights: [
       "Simple Ecommerce UI for practice",
@@ -46,7 +46,7 @@ const sample = [
       "Smooth task interactions",
     ],
   },
-  
+
   {
     title: "Simple Registration Form",
     desc: "A modern landing page with reusable interface components, polished visuals, and responsive design patterns.",
@@ -55,7 +55,15 @@ const sample = [
     url: "https://codenza-ui.vercel.app",
     repo: "https://github.com/Ankush115/user-interface",
     image: "./images/registrationpagelogo.png",
-    tags: ["JavaScript", "CSS", "Responsive Design", "Vite","React","Express","MongoDB"],
+    tags: [
+      "JavaScript",
+      "CSS",
+      "Responsive Design",
+      "Vite",
+      "React",
+      "Express",
+      "MongoDB",
+    ],
     stats: [
       { label: "Pages", value: "2" },
       { label: "Deployments", value: "Live" },
@@ -90,7 +98,7 @@ const sample = [
     stats: [
       { label: "Users", value: "10K+" },
       { label: "Deployments", value: "Live" },
-      {label:"interactions",value:"20K+"},
+      { label: "interactions", value: "20K+" },
       { label: "Pages", value: "18+" },
       { label: "Stars", value: "4.9" },
     ],
