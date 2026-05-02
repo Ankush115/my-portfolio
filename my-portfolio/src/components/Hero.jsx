@@ -13,7 +13,7 @@ export default function Hero() {
             <p className="title">Frontend Developer (3.5+ years of experience)</p>
             <p className="subtitle">Building beautiful, responsive web experiences with React.js, Vite & modern CSS</p>
             <div className="hero-buttons">
-              <a href="#projects" className="btn btn-primary">View Projects</a>
+              <a href="projects" className="btn btn-primary">View Projects</a>
               <a href="#contact" className="btn btn-secondary">Get in Touch</a>
             </div>
             <div className="hero-social">
