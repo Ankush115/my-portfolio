@@ -62,7 +62,7 @@ export default function Contact() {
           <h2>Contact</h2>
           <p className="contact-description">
             Ready to collaborate on a polished web experience? Share your idea
-            and I’ll get back to you quickly.
+            and I’ll get back to you shortly.
           </p>
         </div>
 

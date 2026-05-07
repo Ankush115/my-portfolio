@@ -13,7 +13,7 @@ function App() {
         <Header  />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects/>} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:id" element={<ProjectDetail />} />
         </Routes>
         <footer className="site-footer">© {new Date().getFullYear()} Ankush Wagh — Built with React</footer>
