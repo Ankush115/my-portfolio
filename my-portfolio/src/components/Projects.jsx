@@ -184,7 +184,7 @@ export default function Projects() {
     <section
       id="projects"
       ref={projectsRef}
-      className={`section projects ${revealed ? "reveal" : "hidden"}`}
+      className="section projects"
     >
       <div className="container">
         <div className="projects-header">
