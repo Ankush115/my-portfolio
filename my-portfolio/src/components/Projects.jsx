@@ -25,27 +25,6 @@ const sample = [
       "Reusable shopping components",
     ],
   },
-  {
-    title: "Simple To-Do App",
-    desc: "A lightweight task manager built with React to create, update, and organize daily to-dos with a clean, responsive interface.",
-    role: "Frontend Developer",
-    status: "Open Source",
-    url: "https://github.com/Ankush115/todo",
-    repo: "https://github.com/Ankush115/todo",
-    image: "./images/todopagelogo.png",
-    tags: ["React", "JavaScript", "Productivity", "CSS", "Vite"],
-    stats: [
-      { label: "Tasks", value: "Flexible" },
-      { label: "Users", value: "Growing" },
-      { label: "Stars", value: "4.7" },
-    ],
-    highlights: [
-      "Simple todo app for practice",
-      "Add and manage tasks",
-      "Responsive minimal layout",
-      "Smooth task interactions",
-    ],
-  },
 
   {
     title: "Simple Registration Form",
@@ -181,11 +160,7 @@ export default function Projects() {
     filter === "all" ? sample : sample.filter((p) => p.tags.includes(filter));
 
   return (
-    <section
-      id="projects"
-      ref={projectsRef}
-      className="section projects"
-    >
+    <section id="projects" ref={projectsRef} className="section projects">
       <div className="container">
         <div className="projects-header">
           <div>

@@ -22,7 +22,7 @@ export default function About() {
                   <small>Years experience</small>
                 </div>
                 <div className="about-stat">
-                  <span>5+</span>
+                  <span>3+</span>
                   <small>Projects shipped</small>
                 </div>
                 <div className="about-stat">
