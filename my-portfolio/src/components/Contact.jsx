@@ -138,9 +138,12 @@ export default function Contact() {
                   <option>Other</option>
                 </select>
               </label>
-
               <label>
-                Message
+                Attach a file <span className="required">*</span>
+                <input type="file" accept=".pdf,.doc,.docx" placeholder="File upload coming soon" />
+              </label>
+              <label>
+                Message (optional)
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
