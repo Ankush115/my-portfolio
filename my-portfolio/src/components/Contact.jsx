@@ -8,6 +8,7 @@ export default function Contact() {
   const [reason, setReason] = useState("Project inquiry");
   const [message, setMessage] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
+  const [file,setFile]=useState(null)
   const formRef=useRef();
 
   function handleSubmit(e) {
@@ -23,6 +24,7 @@ export default function Contact() {
       from_email: email,
       reason: reason,
       message: message,
+      file:file,
     };
 
     Promise.all([
@@ -47,6 +49,7 @@ export default function Contact() {
         setEmail("");
         setPosition("");
         setMessage("");
+        setFile(e.target.file);
       })
       .catch(() => {
         setStatusMessage("Failed to send message. Please try again.");
