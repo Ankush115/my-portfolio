@@ -14,7 +14,7 @@ export default function Hero() {
           <div className="hero-text">
             <h1>Ankush Wagh</h1>
             <p className="title">
-              Frontend Developer (3.5+ years of experience)
+              Frontend Developer (3.5 years of experience)
             </p>
             <p className="subtitle">
               Building beautiful, responsive web experiences with React.js, Vite

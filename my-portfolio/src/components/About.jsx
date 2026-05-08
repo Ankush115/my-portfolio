@@ -9,7 +9,16 @@ export default function About() {
           <div className="about-card">
             <div className="about-card-inner">
               <div className="about-avatar">
-                  <img src="./images/profile.jpg" alt="Avatar" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "50%"  }} />
+                <img
+                  src="./images/profile.jpg"
+                  alt="Avatar"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    borderRadius: "50%",
+                  }}
+                />
               </div>
               <h3>Frontend Developer</h3>
               <p className="about-tagline">
@@ -22,8 +31,8 @@ export default function About() {
                   <small>Years experience</small>
                 </div>
                 <div className="about-stat">
-                  <span>3+</span>
-                  <small>Projects shipped</small>
+                  <span>3</span>
+                  <small>Projects built</small>
                 </div>
                 <div className="about-stat">
                   <span>100%</span>
@@ -35,15 +44,16 @@ export default function About() {
 
           <div>
             <p className="about-text">
-              I’m a Frontend Developer with 3.5+ years of experience in creating
-              websites and web apps using React.js, JavaScript, and Redux. I
-              enjoy building fast, clean, and easy-to-use interfaces that work
-              well on all devices. I’m good at working with components, using
-              APIs, and improving website performance. I follow clean coding
-              practices and always try to write code that’s easy to understand
-              and maintain. I work well in teams and have experience in Agile
-              environments. I’m always looking to learn new things and improve
-              my skills in frontend development.
+              I’m a Frontend Developer with over 3.5 years of experience in
+              creating websites and web apps using React.js, JavaScript, and
+              Redux. I enjoy building fast, clean, and easy-to-use interfaces
+              that work well on all devices. I’m good at working with
+              React-components, API integration, and improving website
+              performance. I follow clean coding practices and always try to
+              write code that’s easy to understand and maintain. I work well in
+              teams and have experience in Agile environments. I’m always
+              looking to learn new things and improve my skills in frontend
+              development.
             </p>
 
             <div className="about-highlight">
@@ -57,7 +67,7 @@ export default function About() {
             <h3>Skills</h3>
             <ul className="skills">
               <li>React.JS</li>
-              <li>HTML &amp; CSS</li>
+              <li>HTML5 &amp; CSS3</li>
               <li>Tailwind CSS</li>
               <li>JavaScript</li>
               <li>TypeScript</li>
