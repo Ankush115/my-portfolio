@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 const sample = [
   {
-    title: "Shop Online",
+    title: "Shop Cart",
     desc: "An interactive store UI built with React featuring product browsing, cart interactions, and responsive shopping layouts.",
     role: "Frontend Developer",
     status: "live ",
