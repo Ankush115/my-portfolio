@@ -31,7 +31,7 @@ const sample = [
     desc: "A modern landing page with reusable interface components, polished visuals, and responsive design patterns.",
     role: "Frontend Developer",
     status: "Live",
-    url: "https://codenza-ui.vercel.app",
+    url: "https://registartion-page-zapb.vercel.app/",
     repo: "https://github.com/Ankush115/user-interface",
     image: "./images/registrationpagelogo.png",
     tags: [
