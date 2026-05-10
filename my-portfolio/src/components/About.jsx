@@ -31,8 +31,8 @@ export default function About() {
                   <small>Years experience</small>
                 </div>
                 <div className="about-stat">
-                  <span>3</span>
-                  <small>Projects built</small>
+                  <span>3+</span>
+                  <small>Projects Shipped</small>
                 </div>
                 <div className="about-stat">
                   <span>100%</span>
@@ -75,6 +75,7 @@ export default function About() {
               <li>UI design &amp; accessibility</li>
               <li>Redux/Redux Toolkit</li>
               <li>MongoDB</li>
+              <li>Performance Optimization</li>
             </ul>
           </div>
         </div>
